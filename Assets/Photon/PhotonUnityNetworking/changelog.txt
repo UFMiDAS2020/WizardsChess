@@ -3,12 +3,7 @@ PUN 2 Change Log
 Exit Games GmbH - www.photonengine.com - forum.photonengine.com
 
 
-v2.26.1 (15. December 2020)
-Note: This fix release does not have a new PhotonNetwork.PunVersion. The changes were just for the Editor.
-Fixed: Some edge cases for the included "Simple" addon. 
-Added: Changelog for Simple.
-
-v2.26 (09. December 2020)
+v2.26 (09. December)
 Fixed: Possible IndexOutOfRangeException causing import issues when cached best region summary is not in expected format.
 Changed: Wizard will load Realtime AppId from settings, if present. This should avoid surplus "registrations".
 Changed: PhotonEditor will not call RegisterByEmail, if a request is pending some result. For that, the serviceClient is now a class variable and not a local one.
