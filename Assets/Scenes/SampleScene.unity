@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 160578072}
   - component: {fileID: 160578071}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Network Voice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -438,7 +438,7 @@ MonoBehaviour:
   runInBackground: 1
   statsResetInterval: 1000
   speakerPrefab: {fileID: 0}
-  primaryRecorder: {fileID: 0}
+  primaryRecorder: {fileID: 160578071}
   globalRecordersLogLevel: 1
   globalSpeakersLogLevel: 1
   globalPlaybackDelay: -1
