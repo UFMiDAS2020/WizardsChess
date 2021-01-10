@@ -13,6 +13,8 @@ TagManager:
   - Rook
   - Queen
   - King
+  - Tile
+  - Hand
   layers:
   - Default
   - TransparentFX

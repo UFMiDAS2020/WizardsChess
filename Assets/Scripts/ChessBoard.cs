@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChessBoard : MonoBehaviour
 {
+    /*
     public float tileLength;
     List<ChessPiece> pieces;
 
@@ -45,7 +46,5 @@ public class ChessBoard : MonoBehaviour
     {
         List<string> possibleMoves = new List<string>();
         return possibleMoves;
-    }
-
-
+    }*/
 }

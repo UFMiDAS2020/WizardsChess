@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496d430ea9aa8fc49ae7cbb8d16a47bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  held: 0
   color: 0
   rank: 3
   piece: {fileID: 0}

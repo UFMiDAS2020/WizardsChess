@@ -13,6 +13,8 @@ public class NetworkPlayer : MonoBehaviour
         BLACK
     }
 
+    public bool holding;
+
     public Transform head;
     public Transform leftHand;
     public Transform rightHand;

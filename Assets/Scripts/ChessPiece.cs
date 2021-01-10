@@ -57,30 +57,51 @@ public class ChessPiece : MonoBehaviour
         }
     }
 
-    private void OnColliderEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Something touched me!");
         // If touching tile
         if (other.gameObject.CompareTag("Tile"))
         {
             position = other.gameObject.name;
             Debug.Log(this.gameObject.name + " : " + other.gameObject.name);
         }
+        else if (other.gameObject.CompareTag("Hand"))
+        {
+            Debug.Log("Hand is touching!");
+        }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        InputDevice leftHandDevice = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
-        InputDevice rightHandDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
+        Debug.Log("Colliding with something!");
+        if (other.gameObject.CompareTag("Hand"))
+        {
+            InputDevice leftHandDevice = InputDevices.GetDeviceAtXRNode(XRNode.LeftHand);
+            InputDevice rightHandDevice = InputDevices.GetDeviceAtXRNode(XRNode.RightHand);
 
-        float triggerValue, gripValue;
+            float triggerValue, gripValue;
 
-        // See if either hand is holding onto the piece with trigger or grip buttons
-        bool leftHeld = leftHandDevice.TryGetFeatureValue(CommonUsages.trigger, out triggerValue)
-                        || leftHandDevice.TryGetFeatureValue(CommonUsages.grip, out gripValue);
-        bool rightHeld = rightHandDevice.TryGetFeatureValue(CommonUsages.trigger, out triggerValue)
-                        || rightHandDevice.TryGetFeatureValue(CommonUsages.grip, out gripValue);
+            // See if either hand is holding onto the piece with trigger or grip buttons
+            bool leftHeld = leftHandDevice.TryGetFeatureValue(CommonUsages.trigger, out triggerValue)
+                            || leftHandDevice.TryGetFeatureValue(CommonUsages.grip, out gripValue);
+            bool rightHeld = rightHandDevice.TryGetFeatureValue(CommonUsages.trigger, out triggerValue)
+                            || rightHandDevice.TryGetFeatureValue(CommonUsages.grip, out gripValue);
 
-        if (leftHeld && rightHeld) held = true;
-        else held = false;
+            if (leftHeld && rightHeld)
+            {
+                Debug.Log("Holding piece!");
+                held = true;
+            }
+            else held = false;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Hand"))
+        {
+            held = false;
+        }
     }
 }
