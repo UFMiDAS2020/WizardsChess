@@ -151,6 +151,7 @@ public class ChessManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(MoveHorizontally(piece, pos));
         piece.piece.transform.position = new Vector3(piece.piece.transform.position.x, Mathf.MoveTowards(piece.piece.transform.position.y, 0.15f, 5 * Time.deltaTime), piece.piece.transform.position.z);
+        blackTurn = !blackTurn;
 
         /*
         if (currPiece.piece.transform.position == new Vector3(pPos.x, oldY, pPos.z))
