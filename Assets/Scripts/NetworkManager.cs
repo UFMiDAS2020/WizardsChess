@@ -6,6 +6,7 @@ using Photon.Realtime;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
+    public Material whiteHatMat;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +38,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
+        // First player gets white hat
+        if (PhotonNetwork.PlayerListOthers.Length == 0)
+        {
+            NetworkPlayer np = FindObjectOfType<NetworkPlayer>();
+            GameObject hat = np.transform.Find("Head/Sphere/Hat").gameObject;
+            Material[] hatMats = hat.GetComponent<MeshRenderer>().materials;
+            hatMats[0] = whiteHatMat;
+        }
         Debug.Log("A new player joined the room.");
         base.OnPlayerEnteredRoom(newPlayer);
     }
