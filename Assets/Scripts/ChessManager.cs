@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using GoogleCloudStreamingSpeechToText;
+using Photon.Pun;
 
 public class ChessManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class ChessManager : MonoBehaviour
     public float pieceVertSpeed = 5f;
     public float pieceHoriSpeed = 5f;
 
+    Photon.Voice
     float oldY;
     private List<ChessPiece> pieces;
     private bool blackTurn, success;
