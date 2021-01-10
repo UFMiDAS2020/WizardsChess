@@ -21,20 +21,19 @@ public class UnitPosition : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(this.gameObject.name + " : " +other.gameObject.name);
+        if (other.gameObject.CompareTag("Tile"))
+        {
+
+            Debug.Log(this.gameObject.name + " : " + other.gameObject.name);
+        }
     }
 
     private void MoveUnit()
     {
         if (active)
         {
-            char note = pos[0];
-            int loc = pos[1];
-            Vector3 posB = GameObject.Find(pos).transform.position;
-
             transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, 0.5f, speed * Time.deltaTime), transform.position.z);
             StartCoroutine(MoveDown());
-            
         }
     }
 
@@ -43,7 +42,6 @@ public class UnitPosition : MonoBehaviour
         yield return new WaitForSeconds(1f);
         yield return StartCoroutine(Move());
         transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, 0.15f, speed * Time.deltaTime), transform.position.z);
-
     }
     IEnumerator Move()
     {

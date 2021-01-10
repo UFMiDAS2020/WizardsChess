@@ -7,6 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class NetworkPlayer : MonoBehaviour
 {
+
+    public enum Player {
+        WHITE,
+        BLACK
+    }
+
     public Transform head;
     public Transform leftHand;
     public Transform rightHand;
