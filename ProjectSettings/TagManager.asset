@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Fire
+  - Chess Pieces
+  - Pawn
+  - Horse
+  - Bishop
+  - Rook
+  - Queen
+  - King
+  - Tile
+  - Hand
   layers:
   - Default
   - TransparentFX
@@ -13,9 +24,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - White Pieces
+  - Black Pieces
+  - FireLayer
   - 
   - 
   - 
