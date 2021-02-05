@@ -1,4 +1,4 @@
-[![Demo video](http://img.youtube.com/vi/guHtKY6lrWA/0.jpg)](https://www.youtube.com/embed/guHtKY6lrWA)
+[![Demo video](https://github.com/jordansmithsgames/jordansmithsgames/blob/main/readmes/wizardschess/youtubegif.gif)](https://www.youtube.com/embed/guHtKY6lrWA)
 
 (Psst, check out the [Devpost](https://www.devpost.com/software/wizard-s-chess-5qwber)!)
 
