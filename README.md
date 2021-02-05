@@ -1,3 +1,6 @@
+# Wizard's Chess
+### **WINNER** of the Best Use of Google Cloud Award at Snakes and Hackers 2021!
+
 [![Demo video](https://github.com/jordansmithsgames/jordansmithsgames/blob/main/readmes/wizardschess/youtubegif.gif)](https://www.youtube.com/embed/guHtKY6lrWA)
 
 (Psst, check out the [Devpost](https://www.devpost.com/software/wizard-s-chess-5qwber)!)
