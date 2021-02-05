@@ -1,4 +1,4 @@
-[![](http://img.youtube.com/vi/VIDEO-ID/0.jpg)](https://www.youtube.com/embed/guHtKY6lrWA)
+[![Demo video](http://img.youtube.com/vi/guHtKY6lrWA/0.jpg)](https://www.youtube.com/embed/guHtKY6lrWA)
 
 (Psst, check out the [Devpost](https://www.devpost.com/software/wizard-s-chess-5qwber)!)
 
